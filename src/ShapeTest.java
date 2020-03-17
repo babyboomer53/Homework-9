@@ -16,6 +16,7 @@
  */
 
 /**
+ *
  * @author Edgar Cole
  */
 public class ShapeTest {
@@ -41,6 +42,9 @@ public class ShapeTest {
                 System.out.printf("area is: %.2f, and volume is: %.2f\n",
                         ((ThreeDimensionalShape) shape).getArea(),
                         ((ThreeDimensionalShape) shape).getVolume());
+            if (shape instanceof Tetrahedron) {
+                System.out.println(((Tetrahedron) shape));
+            }
             System.out.println();
         }
     }

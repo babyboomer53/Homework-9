@@ -6,8 +6,8 @@ public class Tetrahedron extends ThreeDimensionalShape {
 
     public Tetrahedron(double one, double two, double three) {
         this.one = one;
-        this.two= two;
-        this.three= three;
+        this.two = two;
+        this.three = three;
     }
 
     public void setDimensions(double one, double two, double three) {
@@ -16,27 +16,26 @@ public class Tetrahedron extends ThreeDimensionalShape {
         this.three = three;
     }
 
-    public double[] getDimensions() {
-        double[] dimensions = {one, two, three};
-        return dimensions;
+    public String getDimensions() {
+        return String.format("%.2f %.2f %.2f", one, two, three);
+
     }
 
     public double getFirstDimension() {
-        return  this.one;
+        return this.one;
     }
 
-
     public double getSecondDimension() {
-        return  this.two;
+        return this.two;
     }
 
     public double getThirdDimension() {
-        return  this.three;
+        return this.three;
     }
 
     @Override
     public double getArea() {
-        return 4 * (0.50 * one * two);	// 4 * (1/2 * baseWidth * baseHeight)
+        return 4 * (0.50 * one * two); // 4 * (1/2 * baseWidth * baseHeight)
     }
 
     @Override
@@ -47,7 +46,9 @@ public class Tetrahedron extends ThreeDimensionalShape {
 
     @Override
     public String toString() {
-        return String.format("%sDimensions: %s%n", super.toString(), getDimensions());
+        return String.format("%s: Dimensions: %s%n", getClass().getName(),
+                getDimensions());
+
     }
 
 }
