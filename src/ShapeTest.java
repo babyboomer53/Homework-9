@@ -36,14 +36,17 @@ public class ShapeTest {
 
         for (Shape shape : shapes) {
             if (shape instanceof TwoDimensionalShape)
-                System.out.printf("area is: %.2f\n",
+                System.out.printf("%s: area is: %.2f\n",
+                        shape.getClass().getName(),
                         ((TwoDimensionalShape) shape).getArea());
-            else if (shape instanceof ThreeDimensionalShape)
-                System.out.printf("area is: %.2f, and volume is: %.2f\n",
+            else if (shape instanceof ThreeDimensionalShape) {
+                System.out.printf("%s: area is: %.2f, and volume is: %.2f\n",
+                        shape.getClass().getName(),
                         ((ThreeDimensionalShape) shape).getArea(),
                         ((ThreeDimensionalShape) shape).getVolume());
-            if (shape instanceof Tetrahedron) {
-                System.out.println(((Tetrahedron) shape));
+                if (shape instanceof Tetrahedron) {
+                    System.out.println(((Tetrahedron) shape));
+                }
             }
             System.out.println();
         }

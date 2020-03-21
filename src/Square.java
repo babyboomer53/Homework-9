@@ -1,26 +1,26 @@
 public class Square extends TwoDimensionalShape {
-    private double width;
+    private double length;
 
-    public Square(double width) {
-        this.width = width;
+    public Square(double length) {
+        this.length = length;
     }
 
-    public double getWidth() {
-        return width;
+    public double getLength() {
+        return length;
     }
 
-    public void setLength(double width) {
-        this.width = width;
+    public void setLength(double length) {
+        this.length = length;
     }
 
     @Override
     public double getArea() {
-        return Math.pow(getWidth(), 2);
+        return Math.pow(getLength(), 2);
     }
 
     @Override
     public String toString() {
-        return String.format("%sLength: %.2f%n", super.toString(), getWidth());
+        return String.format("%s %s Length: %.2f%n", getClass().getName(), super.toString(), getLength());
     }
 
 }
